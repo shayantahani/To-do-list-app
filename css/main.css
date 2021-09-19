@@ -1,0 +1,179 @@
+:root {
+    --violet: rgb(126, 53, 194);
+    --primaryviolet: rgb(216, 175, 255);
+    --red: red;
+    --background-input: rgb(255, 255, 255);
+    --checked: rgb(35, 236, 35);
+    --checkBtn: rgb(59, 133, 59);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+    background-color: rgb(247, 230, 255);
+}
+.head-name {
+    font-size: 3rem;
+    cursor: pointer;
+    transition: all ease-in-out 0.5s;
+}
+.head-name:hover {
+    color: var(--violet);
+}
+/* layout */
+.app-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 710px;
+    height: 400px;
+}
+/* styling input and Button*/
+.inputs {
+    width: 60%;
+    height: 70px;
+    display: flex;
+}
+#input {
+    width: 400px;
+    background-color: var(--background-input);
+    border: none;
+    outline: none;
+    padding: 12px;
+    text-transform: capitalize;
+    font-size: 1rem;
+    cursor: pointer;
+}
+/* task and task div container styles */
+.tasks-container {
+    width: 405px;
+    height: 300px;
+}
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 10px;
+    border-radius: 4px;
+    width: 100%;
+    height: 45px;
+    margin-top: 10px;
+    background-color: var(--primaryviolet);
+}
+li {
+    width: 300px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    transition: all ease-in-out 0.4s;
+}
+.check-icon {
+    font-size: 1.4rem;
+    margin: 5px;
+    color: var(--checkBtn);
+    cursor: pointer;
+}
+.trash-icon {
+    font-size: 1.4rem;
+    margin: 5px;
+    color: var(--red);
+    cursor: pointer;
+}
+#add-task-btn {
+    width: 70px;
+    height: 70px;
+    background-color: var(--background-input);
+    border: none;
+    outline: none;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.add-icon {
+    color: var(--violet);
+    font-size: 1.5rem;
+}
+/* dropdown styles and changing the dropdown selector arrow */
+.dropdown {
+    width: 200px;
+    height: 70px;
+    position: relative;
+}
+select {
+    outline: none;
+    border: none;
+    color: var(--violet);
+    appearance:none;
+}
+.dropdown-menu {
+    width: 200px;
+    height: 70px;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 10px;
+    font-weight: bold;
+    position: relative;
+}
+.dropdown::after {
+    content: "\25BC";
+    position: absolute;
+    top: 6px;
+    right: 5px;
+    padding: 1rem;
+    color: var(--violet);
+    pointer-events: none;
+}
+/* styling li tags (tasks) */
+.trashIcon {
+    font-size: 1.5rem;
+    color: var(--red);
+    font-weight: bold;
+    cursor: pointer;
+}
+.removeBtn {
+    outline: none;
+    background-color: var(--primaryviolet);
+    border: none;
+    margin: 10px;
+    transition: all ease-in-out 0.4s;
+}
+.checkBtn {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--checkBtn);
+    padding: 5px;
+    background-color: var(--primaryviolet);
+    transition: all ease-in-out 0.4s;
+}
+/* changing the color when checked */
+.checked {
+    background-color: var(--checked);
+    transition: all ease-in-out 0.4s;
+    text-decoration: line-through;
+    opacity: 0.8;
+}
+.checkedBtn {
+    background-color: var(--checked);
+}
+.remove-checked {
+    background-color: var(--checked);
+    transition: all ease-in-out 0.4s;
+}
+.checked-task {
+    background-color: var(--checked);
+    transition: all 0.4s ease-in-out;
+}

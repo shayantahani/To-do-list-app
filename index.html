@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/all.css">
+    <title>To-do-list</title>
+</head>
+
+<body>
+    <header class="head-name">
+        <h1>To Do List</h1>
+    </header>
+    <div class="app-container">
+        <form class="inputs">
+            <input type="text" id="input"><button type="button" id="add-task-btn"><i
+                    class="fas fa-plus-circle add-icon"></i></button>
+        </form>
+        <div class="dropdown">
+            <select class="dropdown-menu">
+                <option value="all">ALL</option>
+                <option value="completed">COMPLETED</option>
+                <option value="uncompleted">UNCOMPLETED</option>
+            </select>
+        </div>
+        <div class="tasks-container">
+            <ul class="task-list"></ul>
+        </div>
+    </div>
+    <script src="/script.js"></script>
+</body>
+
+</html>
